@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+class AreaofRectangle
+{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		AreaofRectangle ar = new AreaofRectangle();
+		double l = sc.nextDouble();
+		double b = sc.nextDouble();
+		double area = ar.areaofRectangle(l, b);
+	}
+	double areaofRectangle(double l, double b){
+		return l*b;
+	}
+}
