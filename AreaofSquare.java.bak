@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class AreaofSquare
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		AreaofSquare as = new AreaofSquare();
+		double side;
+		System.out.println("Enter the side of square ");
+		side = sc.nextDouble();
+		double area = sc.AreaSquare(side);
+		System.out.println("The area of square is "+ area);
+	}
+	
+	
+	double AreaSquare(double s){
+		return s*s;
+	}
+}
