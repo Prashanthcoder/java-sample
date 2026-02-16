@@ -7,12 +7,15 @@ Scanner sc = new Scanner(System.in);
 Conditions1 s = new Conditions1();
 int balance = 500;
 System.out.println("-----------------------WELCOME----TO--------SHOBHA---------BANK----------------");
+String str = " ";
+while(!str.equals("exit")){
 System.out.println("Enter the choice of service: \n1.Withdraw \n2.Deposit \n3.Exit ");
 int choice = sc.nextInt();
 if(choice == 1){
 	System.out.println("Enter the amount you want to withdraw ");
 	int amount = sc.nextInt();
 	balance = s.withdraw(amount, balance);
+	
 }else if(choice == 2){
 	System.out.println("Enter the amount you want to deposit ");
 	int amount = sc.nextInt();
@@ -20,8 +23,10 @@ if(choice == 1){
 }
 else{
 	System.out.println("Please enter between 3 choices only ");
+	str = "exit";
+	System.out.println("-------------THANK-------YOU------FOR--------BANKING------WITH-------US!---------");
 }
-
+}
 }
 
 int withdraw(int amount, int balance){
