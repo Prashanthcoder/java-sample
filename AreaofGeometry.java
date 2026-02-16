@@ -1,0 +1,37 @@
+class AreaofGeometry
+{
+public static void main(String[] args){
+	System.out.println("The area of the circle is "+ A_circle(7.0));
+	System.out.println("The area of the triangle is " + A_triangle(5.0, 7.0));
+	System.out.println("The area of the rectangle is " + A_rectangle(11.0, 5.5));
+	System.out.println("The area of the Ellipse is "+A_Ellipse(5.0, 7.0));
+	System.out.println("The area of the Sector where the radian theta is pi/4 "+A_Sector(7.0, 3.1428/4));
+	System.out.println("The area of the parallelogram is "+A_parallelogram(20, 7));
+	System.out.println("The area of the Trapezoid is " +A_trapezoid(7.0, 5.0, 23.5));
+	System.out.println("The area of the Square is "+square(8.0)); 
+}
+static double A_circle(double r){
+	return 3.14*r*r;
+}
+static double A_triangle(double b, double h){
+	return 0.5*b*h;
+}
+static double A_rectangle(double l, double b){
+	return l*b;
+}
+static double A_Ellipse(double a, double b){
+	return 3.14*a*b;
+}
+static double A_Sector(double r, double theta){
+	return 0.5*r*r*theta;
+}
+static double A_parallelogram(double b, double h){
+	return b*h;
+}
+static double A_trapezoid(double a, double b, double h){
+	return 0.5*(a+b)*h;
+}
+static double square(double side){
+	return side*side;
+}
+}
