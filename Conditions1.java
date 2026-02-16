@@ -8,6 +8,13 @@ Conditions1 s = new Conditions1();
 int balance = 500;
 System.out.println("-----------------------WELCOME----TO--------SHOBHA---------BANK----------------");
 String str = " ";
+boolean security = false;
+System.out.println("Please enter your user name and pin for authentication ");
+String user = sc.nextLine();
+System.out.print("pins(4 digit): ");
+int pin = sc.nextInt();
+security = s.authentication(user, pin);
+if(security == true){
 while(!str.equals("exit")){
 System.out.println("Enter the choice of service: \n1.Withdraw \n2.Deposit \n3.Exit ");
 int choice = sc.nextInt();
@@ -27,6 +34,16 @@ else{
 	System.out.println("-------------THANK-------YOU------FOR--------BANKING------WITH-------US!---------");
 }
 }
+}
+}
+
+boolean authentication(String user, int pin){
+	if(user.equals("prashanth") & pin == 3881){
+		return true;
+	}
+	else{
+		return false;
+	}
 }
 
 int withdraw(int amount, int balance){
