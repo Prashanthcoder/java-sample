@@ -35,7 +35,11 @@ else{
 }
 }
 }
+else{
+	System.out.println("incorrect user or pin!");
 }
+}
+
 
 boolean authentication(String user, int pin){
 	if(user.equals("prashanth") & pin == 3881){
