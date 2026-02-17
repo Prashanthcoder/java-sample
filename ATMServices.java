@@ -45,7 +45,7 @@ else{
 
 
 boolean authentication(String user, int pin){
-	if(user.equals("prashanth") & pin == 3881){
+	if(user.equals("prashanth") && pin == 3881){
 		return true;
 	}
 	else{
@@ -53,8 +53,12 @@ boolean authentication(String user, int pin){
 	}
 }
 
-int withdraw(int amount, int balance){
-	if(balance<amount)
+int withdraw(int amount, int balance){ 
+    if(amount<=0){	
+	System.out.println("Invalid amount");
+}
+
+ else if(balance<amount)
 	{
 	System.out.println("Insufficient balance! Check your balance: "+balance);
 	}
@@ -62,12 +66,13 @@ int withdraw(int amount, int balance){
 		balance = balance- amount;
 		System.out.println("Amount withdrawed! \n Current balance: "+balance);
 	}
+  
 	return balance;
 }
 
 
 int deposit(int amount, int balance){
-	if(amount<0){
+	if(amount<=0){
 	System.out.println("enter valid amount");
 }else{
 	balance = balance + amount;
