@@ -5,10 +5,8 @@ static int count = 0;
 public static void main(String[] args)
 {
 Scanner sc = new Scanner(System.in);
-ATMServices s = new ATMServices();
 int balance = 500;
 System.out.println("-----------------------WELCOME----TO--------SHOBHA---------BANK----------------");
-String str = " ";
 boolean security = false;
 do{
 System.out.println("Please enter your user name and pin for authentication ");
@@ -16,7 +14,7 @@ String user = sc.nextLine();
 System.out.print("pins(4 digit): ");
 int pin = sc.nextInt();
 sc.nextLine();
-security = s.authentication(user, pin);
+security = authentication(user, pin);
 if(security == true){
 	break;
 }
@@ -36,33 +34,33 @@ else
 
 
 if(security == true){
-while(!str.equals("exit")){
-System.out.println("Enter the choice of service: \n1.Withdraw \n2.Deposit \n3.Exit ");
+while(true){
+System.out.println("\nEnter the choice of service: \n1.Withdraw \n2.Deposit \n3.Exit \n");
 int choice = sc.nextInt();
 if(choice == 1){
 	System.out.println("Enter the amount you want to withdraw ");
 	int amount = sc.nextInt();
-	balance = s.withdraw(amount, balance);
+	balance = withdraw(amount, balance);
 	
 }else if(choice == 2){
 	System.out.println("Enter the amount you want to deposit ");
 	int amount = sc.nextInt();
-	balance = s.deposit(amount, balance);
+	balance = deposit(amount, balance);
 }
 else if(choice == 3){
-	str = "exit";
-	System.out.println("-------------THANK-------YOU------FOR--------BANKING------WITH-------US!---------");
+	System.out.println("\n-------------THANK-------YOU------FOR--------BANKING------WITH-------US!---------");
+	break;
 }
 else{
 	System.out.println("Invalid choice");
-	str = "exit";
+	break;
 }
 }
 }
 
 
 }
-boolean authentication(String user, int pin){
+static boolean authentication(String user, int pin){
 	if(user.equals("prashanth") && pin == 3881){
 		return true;
 	}
@@ -71,7 +69,7 @@ boolean authentication(String user, int pin){
 	}
 }
 
-int withdraw(int amount, int balance){ 
+static int withdraw(int amount, int balance){ 
     if(amount<=0){	
 	System.out.println("Invalid amount");
 }
@@ -89,7 +87,7 @@ int withdraw(int amount, int balance){
 }
 
 
-int deposit(int amount, int balance){
+static int deposit(int amount, int balance){
 	if(amount<=0){
 	System.out.println("enter valid amount");
 }else{
