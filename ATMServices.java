@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 class ATMServices{
+static int count = 0;
 public static void main(String[] args)
 {
 Scanner sc = new Scanner(System.in);
@@ -9,11 +10,31 @@ int balance = 500;
 System.out.println("-----------------------WELCOME----TO--------SHOBHA---------BANK----------------");
 String str = " ";
 boolean security = false;
+do{
 System.out.println("Please enter your user name and pin for authentication ");
 String user = sc.nextLine();
 System.out.print("pins(4 digit): ");
 int pin = sc.nextInt();
+sc.nextLine();
 security = s.authentication(user, pin);
+if(security == true){
+	break;
+}
+else
+{
+	count++;
+	if(count==2){
+		System.out.println("------------------------------Caution! Only 1 attempts left---------------------------------------------");
+	}
+	if(count==3)
+	{
+		System.out.println("Your pin has been locked! Due to maximum try has been reached!");
+		break;
+	}
+}
+}while(count<3);
+
+
 if(security == true){
 while(!str.equals("exit")){
 System.out.println("Enter the choice of service: \n1.Withdraw \n2.Deposit \n3.Exit ");
@@ -38,12 +59,9 @@ else{
 }
 }
 }
-else{l
-	System.out.println("Incorrect user or pin!");
-}
-}
 
 
+}
 boolean authentication(String user, int pin){
 	if(user.equals("prashanth") && pin == 3881){
 		return true;
