@@ -54,6 +54,7 @@ System.out.println(area);
 class Demo
 {
 public static void main(String[] args){
+System.out.println("The program to find areas with only methods no parameters and no return type");
 	Sample.AreaofCircle();
 Sample.AreaofParallelogram();
 Sample.AreaofSector();

@@ -39,6 +39,7 @@ System.out.println(area);
 class Areaof
 {
 public static void main(String[] args){
+System.out.println("Program to find the area of geometry using the parameters but no return type");
 	Sample.AreaofCircle(7.0);
 Sample.AreaofParallelogram(2, 3);
 Sample.AreaofSector(7.0, 3.1428);
