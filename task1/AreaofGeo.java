@@ -28,10 +28,10 @@ static double AreaofSector(double r, double theta){
 	return area;
 }
 }
-
 class AreaofGeo
 {
 public static void main(String[] args){
+System.out.println("The program to find the area using parameters and return type");
 	Sample.AreaofCircle(7.0);
 Sample.AreaofParallelogram(2, 3);
 Sample.AreaofSector(7.0, 3.1428);
