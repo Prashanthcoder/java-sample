@@ -1,7 +1,7 @@
 class Positive
 {
 static void checkpositive(int num){
-	if(num<0)
+	if(num>0)
 	{
 		System.out.println(num + "is positive");
 	}
