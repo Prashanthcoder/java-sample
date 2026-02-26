@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Reverse
 {
 String straight(String str){
@@ -18,7 +20,9 @@ return res;
 }
 public static void main(String[] args){
 	Reverse r1 = new Reverse();
-	String str = "hello prashanth";
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter the string to reverse");
+	String str = sc.nextLine();
 	System.out.println("\" "+r1.straight(str)+"\" "+ " this is not reversed cause the iteration is just traversal into string");
 	System.out.println("\" "+r1.reverse(str)+"\" "+" this is reversed cause it passed into the method reverse the reversal traversal and storage, concatenation");
 }
