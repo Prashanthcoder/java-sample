@@ -9,6 +9,7 @@ static void StudentDetails(String name, int id){
 static void StudentDetails(int result, String name, int id){
 	System.out.println("The id : "+id+" Name : "+name+" Result : "+result);
 }
+
 public static void main(String[] args){
 	StudentDetails("Prashanth");
 StudentDetails("Prashanth", 28);
