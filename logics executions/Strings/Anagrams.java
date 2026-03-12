@@ -14,11 +14,20 @@ char[] c2 = str2.toCharArray();
 if(c1.length == c2.length){
 	Arrays.sort(c1);
 Arrays.sort(c2);
-if(Arrays.equals(c1,c2)){
+/*if(Arrays.equals(c1,c2)){
 	System.out.println("it is an anagram");
 }else{
 	System.out.println("it is not an anagram");
 }
+}*/
+for(int i = 0;i<c1.length;i++){
+	if(c1[i]!=c2[i]){
+		System.out.println("it is not a anagram");
+return;
+	}
+
+}
+System.out.println("it is an anagram");
 }
 else{
 	System.out.println("it is not an anangram");
