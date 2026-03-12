@@ -1,10 +1,14 @@
 import java.util.Arrays;
-
+import java.util.Scanner;
 class Anagrams
 {
 public static void main(String[] args){
-	String str1 = "cat";
-String str2 = "act";
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the two strings to check anagram or not");
+System.out.print("Str1: ");
+	String str1 = sc.nextLine();
+System.out.print("Str2: ");
+String str2 = sc.nextLine();
 char[] c1 = str1.toCharArray();
 char[] c2 = str2.toCharArray();
 if(c1.length == c2.length){
