@@ -1,4 +1,4 @@
-class VoteEligibility 
+class VoteEligibilty 
 {
 static void agetest(int age){
 	if(age>=18){

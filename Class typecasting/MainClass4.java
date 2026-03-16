@@ -20,6 +20,6 @@ System.out.println(d1.x);
 Dumtaka du = (Dumtaka)d1;
 System.out.println("****downcasting***");
 du.disp();
-System.out.println(du.x);
+System.out.println(du.x);	
 	}
 }

@@ -18,7 +18,7 @@ sc.nextLine();
 
 		System.out.println("Enter the phone number: ");
 		long phno = sc.nextLong();
-sc.nextLine();
+sc.nextLine();f
 		System.out.println("-------------STUDENT-------DETAILS---------------");
 		System.out.println("Name : "+name);
 		System.out.println("ID : "+id);
