@@ -1,4 +1,4 @@
-class Print1to6
+public class Print1to6
 {
 static void printnum(int start, int end){
 	for(int i=start; i<=end; i++)
