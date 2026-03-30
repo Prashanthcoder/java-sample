@@ -20,6 +20,7 @@ class  FactorialStrong
 			temp/=10;
 			sum = sum+ fact(digit);
 		}
+System.out.println(True);
 		System.out.println("the sum of factorial of each digit : "+sum+" digits : "+digits);
 System.out.println(sum==original?"it is strong num":"it is not strong number");
 	}
