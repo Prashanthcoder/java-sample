@@ -1,0 +1,21 @@
+package collectionadd;
+
+public class SampleShort {
+    static Object[] arr = new Object[10];
+    static int index = 0;
+
+    static void add(Object a) {
+        arr[index++] = a;
+    }
+
+    public static void main(String[] args) {
+        add((short)10);
+        add((short)20);
+        add((short)30);
+
+        for (Object obj : arr) {
+            if (obj != null)
+                System.out.println(obj);
+        }
+    }
+}
