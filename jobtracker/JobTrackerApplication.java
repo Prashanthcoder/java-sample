@@ -26,15 +26,32 @@ public class JobTrackerApplication {
 				break;
 				
 			case 2:
+				if(tracker.isEmpty()) {
+					System.out.println("No applications please add it");
+					}else {
 				System.out.println("Here are the Applications you applied for! ");
-				for(int i =0;i<tracker.size();i++) {
-				Object obj = tracker.get(i);
-				  JobTracker jobTracker= (JobTracker)obj;
-				  System.out.println(jobTracker);
+				for(JobTracker track: tracker) {
+				  System.out.println(track);
 			}
+					}
 			break;
 			
-			case 3: 
+			case 3: System.out.println("\nEnter company name to search: ");
+				String searchCompany = sc.nextLine();
+				boolean found=false;
+				for(JobTracker jobs: tracker) {
+					if(jobs.companyName.equalsIgnoreCase(searchCompany)) {
+						System.out.println(jobs);
+						found = true;
+					}
+				}
+				if(!found) {
+					System.out.println("No company with Name "+searchCompany);
+				}
+				break;
+				
+			case 4: return;
+			default: System.out.println("please choose the right choice");
 			}
 		}
 	}
