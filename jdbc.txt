@@ -1,0 +1,25 @@
+1. What is JDBC and it's features. 
+2. What is an API. 
+3. Explain the connections steps of JDBC. 
+4. Difference between Statement , Callable, PreparedStatement interface. 
+5. Crate a JDBC project and perform CRUD operations.
+
+1. Answer: 
+	It stands for Java database connectivity, it is an api which is used to connect and execute the queries with database.
+	
+2. Answer
+	It stands for application programming interface, it acts as an intermediate software which is used to connect two softwares
+	
+3. Answer: 
+	-> Import required packages.
+	-> Load and register the Driver.
+	-> Estabish a connection with database. 
+	-> create a connection.
+	-> execute queries.
+	-> process the result.
+	-> close the connection.
+
+4. Answer: 
+	Statement, it is a class which is static, unsafe not used in rare case.
+	Callable, it is a class which is stored procedure. It is faster exection , reusable, secure, reduces networ traffic, easier maintenane.
+	PreparedStatement, it is a class used in real project, faster, secure, , prevents sql injections.
