@@ -87,7 +87,8 @@ java-sample/
 ✅ OOP Concepts
 ✅ Collections Framework
 ✅ Exception Handling
-🔄 Multithreading (in progress)
+🔄 Multithreading
+Collections, Concurrency, data structures and algorithms and etc.
 ⬜ Spring Boot
 ⬜ REST APIs
 ⬜ Hibernate / JPA
