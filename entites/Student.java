@@ -1,17 +1,23 @@
 package dto;
 
+import java.time.LocalDate;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Student {
 	@Id
-	int StudId;
-	String FirstName;
-	String LastName;
-	String Street;
-	String City;
-	String dob;
+	private int StudId;
+	private String FirstName;
+	private String LastName;
+	private String Street;
+	private String City;
+	private LocalDate dob;
+	@OneToMany
+	private List<Registration> registration;
 	public int getStudId() {
 		return StudId;
 	}
@@ -42,10 +48,10 @@ public class Student {
 	public void setCity(String city) {
 		City = city;
 	}
-	public String getDob() {
+	public LocalDate getDob() {
 		return dob;
 	}
-	public void setDob(String dob) {
+	public void setDob(LocalDate dob) {
 		this.dob = dob;
 	}
 	
