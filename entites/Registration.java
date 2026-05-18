@@ -1,41 +1,55 @@
 package dto;
 
-
 import java.time.LocalDate;
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+
 @Entity
-public class Registration {
+public class Registration{
+	@Id
+	@GeneratedValue
+	private int id;
 	@Column
-	int CourseId;
-	@Column
-	int StudId;
-	@Column
-	LocalDate doj;
-	@OneToMany
-	private List<Student> student;
-		
+	private LocalDate doj;
+	
+	@ManyToOne
+	@JoinColumn(name = "student_id")
+	private Student student;
+	
+	@ManyToOne
+	@JoinColumn(name = "course_id")
+	private Course course;
+	
+	public Registration() {}
+
 	public LocalDate getDoj() {
 		return doj;
 	}
+
 	public void setDoj(LocalDate doj) {
 		this.doj = doj;
 	}
-	public int getCourseId() {
-		return CourseId;
+
+	public Student getStudent() {
+		return student;
 	}
-	public void setCourseId(int courseId) {
-		CourseId = courseId;
+
+	public void setStudent(Student student) {
+		this.student = student;
 	}
-	public int getStudId() {
-		return StudId;
+
+	public Course getCourse() {
+		return course;
 	}
-	public void setStudId(int studId) {
-		StudId = studId;
+
+	public void setCourse(Course course) {
+		this.course = course;
 	}
+	
 	
 }
