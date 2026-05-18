@@ -3,56 +3,77 @@ package dto;
 import java.time.LocalDate;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Student {
+public class Student{
 	@Id
-	private int StudId;
-	private String FirstName;
-	private String LastName;
-	private String Street;
-	private String City;
+	private int stuId;
+	private String firstName;
+	private String lastName;
+	private String street;
+	private String city;
 	private LocalDate dob;
-	@OneToMany
-	private List<Registration> registration;
-	public int getStudId() {
-		return StudId;
+	
+	@OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+	private List<Registration> registrations;
+
+	public int getStuId() {
+		return stuId;
 	}
-	public void setStudId(int studId) {
-		StudId = studId;
+
+	public void setStuId(int stuId) {
+		this.stuId = stuId;
 	}
+
 	public String getFirstName() {
-		return FirstName;
+		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.firstName = firstName;
 	}
+
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
+
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
+
 	public String getStreet() {
-		return Street;
+		return street;
 	}
+
 	public void setStreet(String street) {
-		Street = street;
+		this.street = street;
 	}
+
 	public String getCity() {
-		return City;
+		return city;
 	}
+
 	public void setCity(String city) {
-		City = city;
+		this.city = city;
 	}
+
 	public LocalDate getDob() {
 		return dob;
 	}
+
 	public void setDob(LocalDate dob) {
 		this.dob = dob;
 	}
-	
+
+	public List<Registration> getRegistrations() {
+		return registrations;
+	}
+
+	public void setRegistrations(List<Registration> registrations) {
+		this.registrations = registrations;
+	}
 }
