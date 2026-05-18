@@ -1,41 +1,48 @@
 package dto;
 
-import jakarta.persistence.Column;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
-public class Course {
-@Id
-int courseid;
-@Column
-String courseName;
-@Column
-int Duration;
-@Column
-double Fees;
-public int getCourseid() {
-	return courseid;
-}
-public void setCourseid(int courseid) {
-	this.courseid = courseid;
-}
-public String getCourseName() {
-	return courseName;
-}
-public void setCourseName(String courseName) {
-	this.courseName = courseName;
-}
-public int getDuration() {
-	return Duration;
-}
-public void setDuration(int duration) {
-	Duration = duration;
-}
-public double getFees() {
-	return Fees;
-}
-public void setFees(double fees) {
-	Fees = fees;
-}
+public class Course{
+	@Id
+	private int courseId;
+	private String courseName;
+	private int duration;
+	private double fees;
+	@OneToMany(mappedBy = "course")
+	private List<Registration> registrations;
+	public int getCourseId() {
+		return courseId;
+	}
+	public void setCourseId(int courseId) {
+		this.courseId = courseId;
+	}
+	public String getCourseName() {
+		return courseName;
+	}
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+	public int getDuration() {
+		return duration;
+	}
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+	public double getFees() {
+		return fees;
+	}
+	public void setFees(double fees) {
+		this.fees = fees;
+	}
+	public List<Registration> getRegistration() {
+		return registrations;
+	}
+	public void setRegistration(List<Registration> registrations) {
+		this.registrations = registrations;
+	}
 }
