@@ -1,0 +1,9 @@
+1. Open your search engine
+	download eclipse search it on browser
+2. then click on eclipse ide website.
+3. click on download 2025/12
+4. then click on eclipse for java and web developer click on that then 
+5. then at the right side we have windows: 86x_64
+6. We will get download interface click on download
+7. Next click on the downloaded file and extract the file (next, next)
+8. click on eclipse exe application and your done! sir.
