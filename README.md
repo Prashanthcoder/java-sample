@@ -8,18 +8,25 @@ A collection of Java programs demonstrating core Java concepts, object-oriented 
 
 This repository contains sample Java programs focused on building a solid foundation in backend development. The code is written to be clean, readable, and educational — ideal for beginners and those revisiting core Java fundamentals.
 
+> 292+ commits and counting — actively developed as part of a daily coding habit.
+
 ---
 
 ## 🗂️ Topics Covered
 
 | Category | Concepts |
 |---|---|
-| **OOP Concepts** | Classes, Objects, Inheritance, Polymorphism, Encapsulation, Abstraction |
-| **Collections Framework** | ArrayList, HashMap, HashSet, LinkedList, Iterator |
-| **Exception Handling** | Try-Catch, Custom Exceptions, Finally, Throws |
-| **Control Flow** | Loops, Conditionals, Switch Statements |
-| **Arrays & Strings** | Array manipulation, String methods, StringBuilder |
-| **Methods & Recursion** | Method overloading, Recursive algorithms |
+| **OOP Concepts** | Classes, Objects, Inheritance, Polymorphism, Encapsulation, Abstraction, Type Casting |
+| **Interfaces & Abstract Classes** | Interface programs, Abstract class design |
+| **Collections Framework** | ArrayList, HashMap, Generic Boxing, Collection operations |
+| **Exception Handling** | User-defined exceptions, Try-Catch patterns |
+| **Constructors** | Constructor types, chaining |
+| **Methods** | Method overloading, Static vs Non-static, Return functions, Methods inside methods |
+| **Variables & Scope** | Local variables, Global variables, Pass by reference |
+| **Generics** | Generic boxing and type handling |
+| **Threads** | Multithreading basics |
+| **Geometry / Logic Programs** | Area of Circle, Rectangle, Triangle, Square, Trapezium, Parallelogram, Sector |
+| **Practice & Assignments** | Daily tasks, Q-Spider problems, assignment-based programs |
 
 ---
 
@@ -53,23 +60,53 @@ java FileName
 
 ```
 java-sample/
-├── oop/
-│   ├── Inheritance.java
-│   ├── Polymorphism.java
-│   └── Encapsulation.java
-├── collections/
-│   ├── ArrayListDemo.java
-│   └── HashMapDemo.java
-├── exceptions/
-│   ├── CustomException.java
-│   └── TryCatchDemo.java
-├── basics/
-│   ├── HelloWorld.java
-│   └── ControlFlow.java
+├── Inheritance/
+├── Encapsulation/src/encap/
+├── Class typecasting/
+├── abstractclass/
+├── interfaceprograms/
+├── assigment polymorphism/
+├── Method overloading/
+├── constructor/
+├── collectionsjava/
+├── collectionadd/
+├── genericBoxing/
+├── userdefinedexception/
+├── threads/
+├── access/
+├── entites/
+├── equalsOverride/
+├── Pass by reference/
+├── deciding static or non static/
+├── method inside another method/
+├── logics executions/
+├── jobtracker/
+├── own-interest/
+├── practice/
+├── problemsqspider/
+├── task1/, task2/
+├── task-classtoclassobj/
+├── task-refobj/
+├── task_26_4_26/, task_26_4_26/, assignment7_4_26/, java_8_4_26/
+├── AreaofGeometry.java
+├── AreaofRectangle.java
+├── AreaofSquare.java
+├── Areaoftriangle.java
+├── AreaofTrapezium.java
+├── AreaofParallelogram.java
+├── AreaofSector.java
+├── CircleArea.java
+├── PrimeChecker.java
+├── GlobalVariablesDemo.java
+├── LocalVariablesDemo.java
+├── MethodOverload.java
+├── AuthController.java
+├── Check.java
+├── Solution.java
+├── Practice1.java, Practice2.java
+├── jdbc.txt
 └── README.md
 ```
-
-> ⚠️ Folder structure may vary — explore the repo for actual files.
 
 ---
 
@@ -84,11 +121,15 @@ java-sample/
 
 ```
 ✅ Core Java Fundamentals
-✅ OOP Concepts
+✅ OOP Concepts (Inheritance, Polymorphism, Encapsulation, Abstraction)
+✅ Interfaces & Abstract Classes
+✅ Constructors & Methods
+✅ Variables & Scope (Local, Global, Pass by Reference)
 ✅ Collections Framework
-✅ Exception Handling
-🔄 Multithreading
-Collections, Concurrency, data structures and algorithms and etc.
+✅ Exception Handling (User-defined Exceptions)
+✅ Generics
+🔄 Multithreading & Concurrency
+🔄 Data Structures & Algorithms
 ⬜ Spring Boot
 ⬜ REST APIs
 ⬜ Hibernate / JPA
