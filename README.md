@@ -25,6 +25,7 @@ This repository contains sample Java programs focused on building a solid founda
 | **Variables & Scope** | Local variables, Global variables, Pass by reference |
 | **Generics** | Generic boxing and type handling |
 | **Threads** | Multithreading basics |
+| **Type Conversion** | Int to char conversion, Class type casting |
 | **Geometry / Logic Programs** | Area of Circle, Rectangle, Triangle, Square, Trapezium, Parallelogram, Sector |
 | **Practice & Assignments** | Daily tasks, Q-Spider problems, assignment-based programs |
 
@@ -63,6 +64,7 @@ java-sample/
 ├── Inheritance/
 ├── Encapsulation/src/encap/
 ├── Class typecasting/
+├── int to char/
 ├── abstractclass/
 ├── interfaceprograms/
 ├── assigment polymorphism/
@@ -87,7 +89,9 @@ java-sample/
 ├── task1/, task2/
 ├── task-classtoclassobj/
 ├── task-refobj/
-├── task_26_4_26/, task_26_4_26/, assignment7_4_26/, java_8_4_26/
+├── task_26_4_26/
+├── assignment7_4_26/
+├── java_8_4_26/
 ├── AreaofGeometry.java
 ├── AreaofRectangle.java
 ├── AreaofSquare.java
@@ -100,6 +104,16 @@ java-sample/
 ├── GlobalVariablesDemo.java
 ├── LocalVariablesDemo.java
 ├── MethodOverload.java
+├── Conditions1.java
+├── Day8.java, Day81.java, Day82.java
+├── Learn.java
+├── Sample.java, Sample5.java
+├── Returnfunc.java
+├── UsingReturn.java
+├── Upper.java
+├── Print.java
+├── Manju.java
+├── Meow.java
 ├── AuthController.java
 ├── Check.java
 ├── Solution.java
@@ -128,6 +142,7 @@ java-sample/
 ✅ Collections Framework
 ✅ Exception Handling (User-defined Exceptions)
 ✅ Generics
+✅ Type Conversion & Casting
 🔄 Multithreading & Concurrency
 🔄 Data Structures & Algorithms
 ⬜ Spring Boot
