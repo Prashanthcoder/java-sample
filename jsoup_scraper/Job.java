@@ -32,8 +32,13 @@ public class Job {
 		return salary;
 	}
 	
+	@Override
 	public String toString() {
-		return String.format("%-40s | %-25s | %-20s |%5", title, company, location, salary);
+	    return String.format("%-40s | %-25s | %-20s | %-15s",
+	            title.length() > 40 ? title.substring(0, 37) + "..." : title,
+	            company.length() > 25 ? company.substring(0, 22) + "..." : company,
+	            location.length() > 20 ? location.substring(0, 17) + "..." : location,
+	            salary);
 	}
 	
 }

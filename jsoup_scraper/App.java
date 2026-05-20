@@ -1,41 +1,27 @@
 package com.prashanth.jsoup_scraper;
 
+import java.util.List;
 
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args ) throws Exception
-    {
-        System.out.println( "Scraping started..." );
-        //connecting to the website
-        Document doc = Jsoup.connect("https://books.toscrape.com/")
-        		.userAgent("Mozilla/5.0")
-        		.timeout(15000)
-        		.get();
-        
-        //select all book elements
-        Elements books = doc.select("article.product_pod");
-        System.out.println("Total number of books: "+ books.size());
-        
-        //Loop and extract the data
-        
-        for(Element book: books) {
-        	String title = book.select("h3 > a").attr("title");
-        	String price = book.select("p.price_color").text();
-        	String rating = book.select("p.star-rating").attr("class").replace("star-rating", " ");
-        	System.out.println("Title: "+title);
-        	System.out.println("Price: "+price);
-        	System.out.println("Rating: "+rating);
-        	System.out.println("_---------------_");
-        }
-    }
+public class App{
+	public static void main(String[] args) throws Exception {
+		JobScraper scraper = new JobScraper();
+		List<Job> jobs = scraper.scrape();
+		
+		if(jobs.isEmpty()) {
+			System.out.println("No jobs found. Try again later.");
+			return;
+		}
+		
+		System.out.println(String.format("%-40s | %-25s | %-20s | %-15s",
+		        "Title", "Company", "Location", "Salary"));
+		System.out.println("-".repeat(90));
+		jobs.forEach(System.out::println);
+		
+		CsvExporter exporter = new CsvExporter();
+		String filename = exporter.generateFilename();
+		exporter.export(jobs, filename);
+		
+		
+		System.out.println("Successfull Jobs scraped: "+jobs.size());
+	}
 }
