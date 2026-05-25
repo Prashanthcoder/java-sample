@@ -12,14 +12,14 @@ public class CsvExporter {
 	public void export(List<Job> jobs, String filename) {
 		try (CSVWriter writer = new CSVWriter(new FileWriter(filename))){
 			
-			String[] header = {"Title", "Company", "Location", "Salary", "URL"};
+			String[] header = {"Title", "Company", "Location", "Salary", "URL", "Source"};
 			writer.writeNext(header);
 			
 			//data rows
 			
 			for(Job job: jobs) {
 				String[] rows = {
-						job.getTitle(),job.getCompany(),job.getLocation(), job.getSalary(), job.getUrl()
+						job.getTitle(),job.getCompany(),job.getLocation(), job.getSalary(), job.getUrl(), job.getSource()
 						
 				};
 				writer.writeNext(rows);
@@ -30,7 +30,6 @@ public class CsvExporter {
 			System.err.println("Error saving the csv : "+e.getMessage());
 		}
 	}
-	
 	
 	public String generateFilename() {
 		String timestamp = LocalDateTime.now()
