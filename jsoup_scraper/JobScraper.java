@@ -31,32 +31,28 @@ public class JobScraper {
 	                .followRedirects(true)
 	                .timeout(30000)
 	                .get();
+
+//		System.out.println("Page Title: " + doc.title());
+//        System.out.println("HTML Length: " + doc.html().length());
+//        System.out.println("\n--- FULL HTML ---");
+//        System.out.println(doc.html());  // print entire HTML
 		
-//		System.out.println("Page title: " + doc.title());
-//		System.out.println("HTML length: " + doc.html().length());
-//		System.out.println("\n--- First 2000 chars of HTML ---");
-//		System.out.println(doc.html().substring(0, 2000));
-		
-		Elements jobCards = doc.select("article.job");
+		Elements jobCards = doc.select("li.new-listing-container");
 		
 		System.out.println("Job found "+jobCards.size()+" job listings\n");
 		
 		for(Element card : jobCards) {
-			String title = card.select("span.title").text().trim();
-			String company = card.select("span.company").text().trim();
-			String location = card.select("span.region.company").text().trim();
-//			String salary = card.select("i.salary").text().trim();
-			 String url      = "https://weworkremotely.com" + card.select("a").attr("href");			
-			if(title.isEmpty()) {
-				continue;
-			}
-			
-			//default values
-			String salary = "Not disclosed";
-//			if(salary.isEmpty()) salary = "Not disclosed";
-			if(location.isEmpty()) location = "Not Specified";
-			
-			jobs.add(new Job(title, company, url, salary, location));
+			 if (card.hasClass("listing-ad")) continue;
+			  String title    = card.select("h3.new-listing__header__title span").text().trim();
+			    String company  = card.select("p.new-listing__company-name").text().trim();
+			    String location = card.select("p.new-listing__company-headquarters").text().trim();
+			    String url      = "https://weworkremotely.com"
+			                    + card.select("a.listing-link--unlocked").attr("href");
+
+			    if (title.isEmpty()) continue;
+			    if (location.isEmpty()) location = "Remote";
+
+			    jobs.add(new Job(title, company, location, "Not disclosed", url, "WeworkRemotely"));
 			
 		}
 		 } catch (IOException e) {
