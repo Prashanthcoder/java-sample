@@ -27,7 +27,8 @@ This repository contains sample Java programs focused on building a solid founda
 | **Threads** | Multithreading basics |
 | **Type Conversion** | Int to char conversion, Class type casting |
 | **Geometry / Logic Programs** | Area of Circle, Rectangle, Triangle, Square, Trapezium, Parallelogram, Sector |
-| **Practice & Assignments** | Daily tasks, Q-Spider problems, assignment-based programs |
+| **Practice & Assignments** | Daily tasks, Q-Spider problems, assignment-based programs, new questions, devs, cool tips|
+
 
 ---
 
