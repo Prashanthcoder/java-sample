@@ -7,7 +7,7 @@ A collection of Java programs demonstrating core Java concepts, object-oriented 
 ## 📌 About
 
 This repository contains sample Java programs focused on building a solid foundation in backend development. The code is written to be clean, readable, and educational — ideal for beginners and those revisiting core Java fundamentals.
-
+Mainly focused on foundational knowledge. If we follow knowledge, Money follows my brotha! Isn't it. 
 > 292+ commits and counting — actively developed as part of a daily coding habit.
 
 ---
