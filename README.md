@@ -10,6 +10,8 @@ This repository contains sample Java programs focused on building a solid founda
 Adding leetcode solutions of best optimised code.
 With addition to problem pattern, and company wise. In within folders.
 Mainly focused on foundational knowledge. If we follow knowledge, Money follows my brotha! Isn't it. 
+Getting started with one day. 
+Everything done in one day.
 > 292+ commits and counting — actively developed as part of a daily coding habit.
 
 ---
