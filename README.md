@@ -8,6 +8,11 @@ A collection of Java programs demonstrating core Java concepts, object-oriented 
 
 This repository contains sample Java programs focused on building a solid foundation in backend development. The code is written to be clean, readable, and educational — ideal for beginners and those revisiting core Java fundamentals.
 Adding leetcode solutions of best optimised code.
+Focusing on clean code
+Streams
+Java 8
+Records
+Reducing boiler plate code
 With addition to problem pattern, and company wise. In within folders.
 Mainly focused on foundational knowledge. If we follow knowledge, Money follows my brotha! Isn't it. 
 Getting started with one day. 
