@@ -8,6 +8,7 @@ A collection of Java programs demonstrating core Java concepts, object-oriented 
 
 This repository contains sample Java programs focused on building a solid foundation in backend development. The code is written to be clean, readable, and educational — ideal for beginners and those revisiting core Java fundamentals.
 Adding leetcode solutions of best optimised code.
+Yeah just solved leetcode easy 
 Focusing on clean code
 
 Fix typo 
